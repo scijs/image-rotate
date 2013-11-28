@@ -26,6 +26,8 @@ require("image-rotate")(result, lena, Math.PI / 6.0)
 require("save-pixels")(result, "png").pipe(process.stdout)
 ```
 
+# API
+
 #### `require("image-rotate")(output,input,theta[,iX,iY,oX,oY])`
 Rotates an image by `theta` radians about the point `iX,iY` in the source image and translated to the point `oX,oY` in the output image.
 
