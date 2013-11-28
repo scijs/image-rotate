@@ -6,7 +6,7 @@ module.exports = rotateImage
 
 function rotateImage(out, inp, theta, iX, iY, oX, oY) {
   var c = Math.cos(theta)
-  var s = Math.sin(theta)
+  var s = Math.sin(-theta)
   iX = iX || inp.shape[0]/2.0
   iY = iY || inp.shape[1]/2.0
   oX = oX || out.shape[0]/2.0
