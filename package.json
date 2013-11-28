@@ -1,0 +1,35 @@
+{
+  "name": "image-rotate",
+  "version": "0.0.0",
+  "description": "Rotates a 2D ndarray",
+  "main": "rotate.js",
+  "directories": {
+    "example": "example"
+  },
+  "dependencies": {
+    "ndarray-warp": "~0.1.0"
+  },
+  "devDependencies": {
+    "lena": "~1.0.0",
+    "luminance": "~1.0.2",
+    "save-pixels": "~0.3.0",
+    "zeros": "~0.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mikolalysenko/image-rotate.git"
+  },
+  "keywords": [
+    "ndarray",
+    "2d",
+    "rotate"
+  ],
+  "author": "Mikola Lysenko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mikolalysenko/image-rotate/issues"
+  }
+}
