@@ -1,6 +1,6 @@
 {
   "name": "image-rotate",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Rotates a 2D ndarray",
   "main": "rotate.js",
   "directories": {
