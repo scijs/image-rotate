@@ -2,6 +2,8 @@ image-rotate
 ============
 Rotates and translates a 2D ndarray.
 
+<img src="https://raw.github.com/mikolalysenko/image-rotate/master/example/rotated.png">
+
 Install
 =======
 
@@ -24,8 +26,19 @@ require("image-rotate")(result, lena, Math.PI / 6.0)
 require("save-pixels")(result, "png").pipe(process.stdout)
 ```
 
-```javascript
-require("image-rotate")(output, input, theta[, iX, iY, oX, oY])
-```
-===
+## `require("image-rotate")(output, input, theta[, iX, iY, oX, oY])`
+Rotates an image by `theta` radians about the point `iX,iY` in the source image and translated to the point `oX,oY` in the output image.
+
+* `output` is an array that gets the output of rotating the image
+* `input` is the image which is rotated
+* `theta` is the amount to rotate by
+* `iX,iY` is the point to rotate about (default center of input)
+* `oX,oY` is the image of the point to rotate about in output image (default center of output)
+
+**Returns** `output`
+
+# Credits
+(c) 2013 Mikola Lysenko. MIT License
+
+
 

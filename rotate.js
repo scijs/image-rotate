@@ -7,22 +7,10 @@ module.exports = rotateImage
 function rotateImage(out, inp, theta, iX, iY, oX, oY) {
   var c = Math.cos(theta)
   var s = Math.sin(theta)
-  if(iX === undefined) {
-    iX = inpt.shape[0]/2.0
-    if(oX === undefined) {
-      oX = out.shape[0]/2.0
-    }
-  } else if(oX === undefined) {
-    oX = iX
-  }
-  if(iY === undefined) {
-    iY = inpt.shape[0]/2.0
-    if(oY === undefined) {
-      oY = out.shape[0]/2.0
-    }
-  } else if(oY === undefined) {
-    oY = iY
-  }
+  iX = iX || inp.shape[0]/2.0
+  iY = iY || inp.shape[1]/2.0
+  oX = oX || out.shape[0]/2.0
+  oY = oY || out.shape[1]/2.0
   var a = oX - c * iX + s * iY
   var b = oY - s * iX - c * iY
   warp(out, inp, function(y,x) {
