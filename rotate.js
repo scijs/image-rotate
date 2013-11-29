@@ -11,8 +11,8 @@ function rotateImage(out, inp, theta, iX, iY, oX, oY) {
   iY = iY || inp.shape[1]/2.0
   oX = oX || out.shape[0]/2.0
   oY = oY || out.shape[1]/2.0
-  var a = oX - c * iX + s * iY
-  var b = oY - s * iX - c * iY
+  var a = iX - c * oX + s * oY
+  var b = iY - s * oX - c * oY
   warp(out, inp, function(y,x) {
     y[0] = c * x[0] - s * x[1] + a
     y[1] = s * x[0] + c * x[1] + b

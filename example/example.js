@@ -2,7 +2,7 @@
 var lena = require("luminance")(require("lena"))
 
 //Allocate storage for result
-var result = require("zeros")([512, 512])
+var result = require("zeros")([1024, 1024])
 
 //Rotate the image
 require("../rotate.js")(result, lena, Math.PI / 6.0)
