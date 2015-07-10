@@ -2,34 +2,36 @@ image-rotate
 ============
 Rotates and translates a 2D [ndarray](https://github.com/mikolalysenko/ndarray).
 
-<img src="https://raw.github.com/mikolalysenko/image-rotate/master/example/rotated.png">
+[![build status](https://secure.travis-ci.org/scijs/image-rotate.png)](http://travis-ci.org/scijs/image-rotate)
 
-Install
-=======
-
-    npm install image-rotate
-
-Example
-=======
+## Example
 
 ```javascript
 //Load input image
-var lena = require("luminance")(require("lena"))
+var baboon = require("luminance")(require("baboon-image"))
 
 //Allocate storage for result
 var result = require("zeros")([512, 512])
 
 //Rotate the image
-require("image-rotate")(result, lena, Math.PI / 6.0)
+require("image-rotate")(result, baboon, Math.PI / 6.0)
 
 //Save the result
 require("save-pixels")(result, "png").pipe(process.stdout)
 ```
+#### Output
 
-# API
+![Output](example/rotated.png)
+
+## Install
+Install using [npm](https://www.npmjs.com/):
+
+    npm install image-rotate
+
+## API
 
 #### `require("image-rotate")(output,input,theta[,iX,iY,oX,oY])`
-Rotates an image by `theta` radians about the point `iX,iY` in the source image and translated to the point `oX,oY` in the output image.
+Rotates an image clockwise by `theta` radians about the point `iX,iY` in the source image and translated to the point `oX,oY` in the output image.
 
 * `output` is an array that gets the output of rotating the image
 * `input` is the image which is rotated
@@ -39,8 +41,5 @@ Rotates an image by `theta` radians about the point `iX,iY` in the source image 
 
 **Returns** `output`
 
-# Credits
+## License
 (c) 2013 Mikola Lysenko. MIT License
-
-
-
